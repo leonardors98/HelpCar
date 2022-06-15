@@ -6,30 +6,30 @@ export const Global = Object.freeze({
   produto: [
     {
       id: 1,
-      empresa: 'nome da empresa',
-      nome: 'nome do produto',
+      empresa: 'Fabinho do pneu',
+      nome: 'Troca de pneu',
       descricao:
-        'asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd ',
-      preco: 12.22,
-      img: 'https://ghavatars.staticblitz.com/leonardors98.png?size=50',
+        'Trocamos pneu 24horas por dia, 7 dias por semana, 350 dias por ano (tambem descançamos) ',
+      preco: 60.01,
+      img: 'https://github.com/leonardors98/angular-AEP/blob/master/src/app/assets/img/troca_de_pneu.jpg?raw=true',
     },
     {
       id: 2,
-      empresa: 'nome da empresa',
-      nome: 'nome do produto',
+      empresa: 'Guinchos rebaixados',
+      nome: 'Guincho de todo tipo de veiculo',
       descricao:
-        'asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd ',
-      preco: 12.22,
-      img: 'https://ghavatars.staticblitz.com/leonardors98.png?size=50',
+        'Guinchamos de tudo um pouco, desde sua bike com o pneu arriado, ate o seu caminhao 7 eixos que deu PT na marginal! ',
+      preco: 456.68,
+      img: 'https://github.com/leonardors98/angular-AEP/blob/master/src/app/assets/img/guincho_tunado.mp3.jpg?raw=true',
     },
     {
       id: 3,
-      empresa: 'nome da empresa',
-      nome: 'nome do produto',
+      empresa: 'Blindados veiculos',
+      nome: 'Cromagem de veiculos customizados',
       descricao:
-        'asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd asdasd asdasd asd ',
-      preco: 12.22,
-      img: 'https://ghavatars.staticblitz.com/leonardors98.png?size=50',
+        'Deixamos seu automovel com a sua cara e seu estilo, totalmente personalizado, com qualidade, rapidez e eficiencia. GARANTIMOS TOTAL SATISFAÇÃO NAS CROMAGEM! (tudo como a lei manda) ',
+      preco: 999.98,
+      img: 'https://github.com/leonardors98/angular-AEP/blob/master/src/app/assets/img/moto_cromada.jpg?raw=true',
     },
   ],
   clientes: [

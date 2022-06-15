@@ -19,32 +19,37 @@
           <h5 class="card-title">{{ produto.nome }}</h5>
           <h6 class="card-title">{{ produto.empresa }}</h6>
           <h6 class="card-title">{{ produto.descricao }}</h6>
+          <div class="row">
           <h6 class="card-title">quantidade - preco</h6>
-
+  
           <p class="card-text">
             total({{ detalhesProduto[index].quantidade }}) - R${{
               produto.preco * detalhesProduto[index].quantidade | number: '1.00'
             }}
           </p>
-          <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </p>
+        </div>
         </div>
       </div>
     </div>
   </div>
   <div
     *ngFor="let produto of produtos; let index = index"
-    class="card bg-dark d-sm-none text-white"
+    class="card bg-dark d-sm-none text-white mb-3"
   >
     <img src="{{ produto.img }}" class="card-img" />
     <div class="card-img-overlay bd-highlight">
       <h5 class="card-title">{{ produto.nome }}</h5>
-      <p class="card-text">{{ produto.descricao }}</p>
-      <p class="card-text">
-        {{ produto.preco * detalhesProduto[index].quantidade | number: '1.00' }}
-      </p>
-      <p class="card-text">Last updated 3 mins ago</p>
+      <h6 class="card-title">{{ produto.empresa }}</h6>
+      <h6 class="card-title">{{ produto.descricao }}</h6>
+      <div class="row">
+        <h6 class="card-title">quantidade - preco</h6>
+
+        <p class="card-text">
+          total({{ detalhesProduto[index].quantidade }}) - R${{
+            produto.preco * detalhesProduto[index].quantidade | number: '1.00'
+          }}
+        </p>
+      </div>
     </div>
   </div>
 </div>

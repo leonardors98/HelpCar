@@ -1,0 +1,11 @@
+<app-header (click)="back()"></app-header>
+
+<div class="container">
+  <app-product *ngIf="onProduct" [product]="produto" (back)="back()">
+  </app-product>
+
+  <app-list-all-products
+    *ngIf="!onProduct"
+    (openProduct)="onClick($event)"
+  ></app-list-all-products>
+</div>

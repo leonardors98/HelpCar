@@ -1,0 +1,102 @@
+<div [formGroup]="pessoaFormGroup">
+  <div class="row g-3">
+    <div class="col-12 col-sm-6">
+      <app-input
+        type="text"
+        label="Nome fantasia"
+        controlName="nomeFantasia"
+      ></app-input>
+    </div>
+    <div class="col-12 col-sm-6">
+      <app-input
+        type="text"
+        label="Razao social"
+        controlName="razaoSocial"
+      ></app-input>
+    </div>
+
+    <div class="col-12 col-sm-6">
+      <app-input
+        type="text"
+        label="Inscricao estadual"
+        controlName="inscricaoEstadual"
+      ></app-input>
+    </div>
+    <div class="col-12 col-sm-6">
+      <app-input
+        type="number"
+        label="Telefone"
+        controlName="telefone"
+      ></app-input>
+    </div>
+    <div class="col-12 col-sm-6">
+      <app-input type="text" label="E-mail" controlName="email"></app-input>
+    </div>
+    <div class="col-12 col-sm-6">
+      <app-input type="password" label="Senha" controlName="senha"></app-input>
+    </div>
+    <!--  -->
+    <div class="col-12 col-sm-6">
+      <app-input type="number" label="CNPJ" controlName="cnpj"></app-input>
+    </div>
+    <div class="col-12 col-sm-6">
+      <app-input
+        type="text"
+        label="Tipo de serviço prestado"
+        controlName="tipoServico"
+      ></app-input>
+    </div>
+    <div class="col-sm-3">
+      <app-input
+        mask="00000-000"
+        type="text"
+        label="Cep"
+        controlName="cep"
+      ></app-input>
+    </div>
+    <div class="col-sm-7">
+      <app-input
+        type="text"
+        label="Logradouro"
+        controlName="logradouro"
+      ></app-input>
+    </div>
+    <div class="col-sm-2">
+      <app-input type="text" label="Numero" controlName="numero"></app-input>
+    </div>
+    <div class="col-sm-4">
+      <app-input type="text" label="Bairro" controlName="bairro"></app-input>
+    </div>
+    <div class="col-sm-4">
+      <app-input type="text" label="Cidade" controlName="cidade"></app-input>
+    </div>
+    <div class="col-sm-4">
+      <label for="inputState" class="form-label required">Estado</label>
+      <select
+        id="inputState"
+        class="form-select"
+        formControlName="estado"
+        [class.is-valid]="pessoaFormGroup.get('estado').dirty"
+      >
+        <option *ngFor="let estado of estados" [value]="estado.sigla">
+          {{ estado.nome }}
+        </option>
+      </select>
+    </div>
+    <div class="col-sm-12 mt-3">
+      <button
+        (click)="editando ? atualizar() : adicionar()"
+        type="button"
+        class="btn btn-primary"
+        [disabled]="pessoaFormGroup.invalid"
+      >
+        <div
+          *ngIf="buttonLoading"
+          class="spinner-border spinner-border-sm text-dark"
+        ></div>
+        <span *ngIf="!buttonLoading && !editando"> Cadastrar </span>
+        <span *ngIf="!buttonLoading && editando"> Atualizar </span>
+      </button>
+    </div>
+  </div>
+</div>

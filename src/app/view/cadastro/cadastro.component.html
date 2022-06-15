@@ -1,0 +1,13 @@
+<app-navbar-voltar rota="login"></app-navbar-voltar>
+
+<div class="container mt-3">
+  <div (click)="alteraCadastro()" class="navbar-brand">
+    <a class="link" *ngIf="tipoCadastro">sou cliente</a>
+    <a class="link" *ngIf="!tipoCadastro">sou empresa</a>
+  </div>
+  <h3 *ngIf="!tipoCadastro">Cadastro de empresa</h3>
+  <h3 *ngIf="tipoCadastro">Cadastro de cliente</h3>
+  <hr />
+  <app-cadastro-empresa *ngIf="!tipoCadastro"></app-cadastro-empresa>
+  <app-cadastro-cliente *ngIf="tipoCadastro"></app-cadastro-cliente>
+</div>

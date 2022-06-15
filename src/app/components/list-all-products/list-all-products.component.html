@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row justify-content-evenly">
+    <div
+      *ngFor="let produto of produtos; let index = index"
+      class="card mb-3 px-0 pointer"
+      style="width: 18rem;"
+    >
+      <div (click)="openProduct.emit(produto)">
+        <img src="{{ produto.img }}" class="card-img img" />
+        <div class="card-body px-2">
+          <div class="row">
+            <h6 class="col card-title">{{ produto.empresa }}</h6>
+
+            <p class="col-auto ps-0">{{ produto.preco }}</p>
+          </div>
+          <h5 class="card-title">{{ produto.nome }}</h5>
+          <p class="card-text">
+            {{
+              produto.descricao.length > maxLimit
+                ? (produto.descricao | slice: 0:maxLimit) + '..'
+                : produto.descricao
+            }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

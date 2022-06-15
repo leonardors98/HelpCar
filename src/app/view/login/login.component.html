@@ -1,0 +1,33 @@
+<div class="container mt-3" [formGroup]="loginFormGroup">
+  <img [src]="logoIMG" class="mx-auto d-block" alt="Logo HelpCar" />
+  <hr />
+  <div class="col-md-8 col-12 offset-md-2">
+    <div class="col-12">
+      <app-input type="text" label="E-mail" controlName="email"></app-input>
+    </div>
+    <div class="col-12">
+      <app-input type="password" label="Senha" controlName="senha"></app-input>
+    </div>
+    <div>
+      <button
+        (click)="login()"
+        type="button"
+        class="btn btn-primary col-12 mt-4"
+        [disabled]="loginFormGroup.invalid"
+      >
+        <div
+          *ngIf="buttonLoading"
+          class="spinner-border spinner-border-sm text-dark"
+        ></div>
+        <span> Entrar </span>
+      </button>
+    </div>
+
+    <div class="mt-3">
+      <a href="/esqueciMinhaSenha"> Esqueci minha senha! </a>
+      <p class="text-body">
+        Não tem uma conta? <a href="/cadastrar">registre-se!</a>
+      </p>
+    </div>
+  </div>
+</div>

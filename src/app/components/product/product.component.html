@@ -1,0 +1,25 @@
+<app-navbar-voltar (click)="voltar()"></app-navbar-voltar>
+<div class="container">
+  <img src="{{ product.img }}" class="card-img" />
+  <div class="card-body">
+    <h5 class="card-title">{{ product.nome }}</h5>
+    <p class="card-text">{{ product.descricao }}</p>
+  </div>
+  <div class="btn-group">
+    <button (click)="subitracao()" class="btn btn-primary">-1</button>
+    <div class="btn btn-primary disabled">
+      quantidade: {{ quantidade }}, total:{{
+        quantidade * preco | number: '1.2-2'
+      }}
+    </div>
+    <button (click)="soma()" class="btn btn-primary">+1</button>
+  </div>
+  <button (click)="comprar()" class="btn btn-primary">Comprar</button>
+  <app-alert
+    [closeable]="true"
+    *ngFor="let alert of alerts; let i = index"
+    (onClose)="removeLiveAlert(i)"
+    [color]="'success'"
+    >Compra efetuada com sucesso!</app-alert
+  >
+</div>
